@@ -1,0 +1,30 @@
+---
+layout: post
+title: Few Funny Google Tricks
+---
+
+h3. Use Google to download movies for free
+
+
+<p style="text-align:center;"><img src="///tmp/moz-screenshot.jpg" alt="" /><img src="///tmp/moz-screenshot-1.jpg" alt="" /><img class="aligncenter" src="http://blog.searchenginewatch.com/blog/img/google-beta.jpg" alt="http://blog.searchenginewatch.com/blog/img/google-beta.jpg" width="360" height="180" />
+
+
+
+This a little bit of a trick to search for movies, TV series or any video that is available for free on servers all around the world. Just copy the following code into Google search box and press enter.
+bq. -inurl:(htm|html|php) intitle:"index of" +"last modified" +"parent directory" +description +size +(wmv|avi|mpg) "dvdrip+xvid"
+<p style="text-align:left;"><a title="Screenshot-20% - 1-5 - 49.1 KB-s - DownThemAll!.png by keheliya, on Flickr" href="http://www.flickr.com/photos/28556607@N04/3148425572/"><img class="aligncenter" src="http://farm4.static.flickr.com/3248/3148425572_088f82747b_o.png" alt="Screenshot-20% - 1-5 - 49.1 KB-s - DownThemAll!.png" width="642" height="180" /></a>
+Just substitute the word "dvdrip+xvid" with the name of the film, if you think it is more likely that the file will be available with that filename. Search Results will direct you to the directories that videos are available. Words like "dvdrip","xvid","axxo" generated very successful results for me. Since it gives links to directly download from the server, it is way faster than torrents මට හිතෙන හැටියට.
+h3. When you own google...
+
+
+Are you bored with the google's Home Page? Dreaming about customizing your familiar google Home page with any name you want? <a title="Your Own Google" href="http://www.funny-google.com/?name=Keheliya">Click here</a> to experience it yourself.
+<p style="text-align:center;">See what I did!
+<a title="Screenshot-Funny-Google - Flock.png by keheliya, on Flickr" href="http://www.flickr.com/photos/28556607@N04/3148425854/"><img class="aligncenter" src="http://farm4.static.flickr.com/3254/3148425854_3b0d37abca_o.png" alt="Screenshot-Funny-Google - Flock.png" width="579" height="390" /></a>
+h3. Just Google It!
+
+
+If you think that your friend still doesn't believe in the power of google (I don't know may be he/she was living under a rock..!) and missing out many interesting things around the world of web...Just send him/her <a href="http://justfuckinggoogleit.com/">this link</a>.
+
+<img src="http://www.saynotocrack.com/img/2006_12/Bart_Blackboard.jpg" alt="http://www.saynotocrack.com/img/2006_12/Bart_Blackboard.jpg" />
+
+If you find out many more interesting things about google or any other search related stuff just post them here as a comment.

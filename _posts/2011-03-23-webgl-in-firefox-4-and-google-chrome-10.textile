@@ -1,0 +1,51 @@
+---
+layout: post
+title: WebGL in Firefox 4 and Google Chrome 10
+---
+
+If you are experimenting with <a href="http://en.wikipedia.org/wiki/WebGL">WebGL</a>, with a non-nVidia based graphics chip like Intel or AMD/ATI, you may have noticed it no longer works after an update to Google Chrome 10. Even in Firefox 4 with its <a href="https://developer.mozilla.org/en/WebGL">much awaited</a> WebGL support, things are not working well.
+WebGL makes use of OpenGL to render 3D graphics in the web browser. Seems OpenGL and drivers are <a href="https://hacks.mozilla.org/2011/01/firefox-4-beta-9-a-huge-pile-of-awesome/comment-page-1/#comment-349829">"disastrously buggy"</a> that both <a href="http://www.google.com/support/forum/p/Chrome/thread?tid=4ed2cebe3379b1a2&hl=en">Chrome</a> and <a href="https://wiki.mozilla.org/Blocklisting/Blocked_Graphics_Drivers#On_X11">Firefox</a> have decided to blacklist certain graphic cards. If you are feeling brave and want to bypass these restrictions, here's how to go ahead..
+
+*DISCLAIMER:*
+DO this at your own risk. Engineers at Google and Mozilla must have very important reasons to block these and cripple 3D support in the browser like this for many users, considering the <a href="http://www.slideshare.net/evilhackerdude/webgl-awesomeness">awesomeness</a> of WebGL
+
+h4. In Google Chrome
+
+
+
+You just have to run it with '--ignore-gpu-blacklist' startup switch.
+At the terminal use the command[sourcecode language="bash"]
+google chrome --ignore-gpu-blacklist[/sourcecode]
+
+h4. In Mozilla Firefox
+
+
+
+If you are using an Intel graphics card, you might have to install <a href="http://en.wikipedia.org/wiki/Mesa_3D">OSMesa</a> first, which is a software implementation for OpenGL which enables off-screen rendering. You'll find the package as 'libosmesa6-dev' in Synaptic Package Manager or try the old school method[sourcecode language="bash"]
+sudo apt-get install libosmesa6-dev[/sourcecode]
+
+Then run the following command to run Firefox, bypassing the blacklist.[sourcecode language="bash"]
+MOZ_GLX_IGNORE_BLACKLIST=1 firefox[/sourcecode]
+
+Goto about:config and search for following parameters and make sure they are set as below.[sourcecode]
+webgl.disabled:false
+webgl.force-enabled:false
+webgl.force_osmesa:false
+webgl.osmesalib:/usr/lib/libOSMesa.so
+webgl.prefer-native-gl:false
+webgl.shader_validator:true
+webgl.verbose:false[/sourcecode]
+
+To check whether its working properly Goto a page like <a href="http://bodybrowser.googlelabs.com/">Google Body Browser</a> or examples like <a href="http://learningwebgl.com/lessons/lesson03/index.html">this</a> at Learning WebGL. To know more about your graphic card in Ubuntu try the following commands.[sourcecode gutter="false"]
+inxi -G
+lshw -C video
+glxinfo | grep render[/sourcecode]
+
+Here are some more related resources:
+Learning WebGL <a href="http://learningwebgl.com/blog/">http://learningwebgl.com/blog/</a>
+Planet WebGL <a href="http://www.planet-webgl.org/">http://www.planet-webgl.org/</a>
+WebGL on Intel cards <a href="http://www.guciek.net/en/js/webgl_intel">http://www.guciek.net/en/js/webgl_intel</a>
+Awesomeness of WebGL <a href="http://www.slideshare.net/evilhackerdude/webgl-awesomeness">http://www.slideshare.net/evilhackerdude/webgl-awesomeness</a>
+WebGL @ Mozilla Developer Documentation <a href="https://developer.mozilla.org/en/WebGL">https://developer.mozilla.org/en/WebGL</a>
+News Story at OSNews <a href="http://www.osnews.com/story/24264/No_Hardware_Acceleration_Firefox_for_Linu">http://www.osnews.com/story/24264/No_Hardware_Acceleration_Firefox_for_Linu</a>
+

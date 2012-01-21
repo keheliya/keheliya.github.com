@@ -1,0 +1,32 @@
+---
+layout: post
+title: Linux/UNIX Terminal Commands - Quick Reference Wallpapers
+---
+
+Since I got my <a href="http://www1.euro.dell.com/content/products/featuresdetails.aspx/vostronb_1510?c=uk&l=en&s=bsd&cs=ukbsdt1&~lt=popup">Vostro</a> equipped with the new version of LinuxMint - <a href="http://www.linuxmint.com/download.html">Felicia</a>, I had the opportunity of sharing the FOSS/Linux experience with most of my friends. And the requests for Mint, Ubuntu ISOs & hands-on tutorials kept on increasing...
+
+Although these fancy UIs & Graphical fireworks take our concentration away from getting our hands dirty, its always better to keep an eye on how things work down there. The simple reason is because the terminal is the way to do things faster,better & safer. There are plenty of tutorials on the internet teaching us how to get things done using linux/unix OS, but its always handy to keep the manual or a cheatsheet by your side for a quick reference.
+So I thought of sharing some interesting wallpapers & reference manuals I found some time back on the internet regarding Linux/UNIX commands.
+
+*Linux Commands Wallpaper I
+*
+
+<a href="http://farm4.static.flickr.com/3643/3399963242_b5b0f54efc_o.png"><img class="alignnone" title="Linux Commands Wallpaper 1" src="http://farm4.static.flickr.com/3643/3399963242_79e6d255ba_m.jpg" alt="" width="240" height="192" /></a>
+
+*Linux Commands Wallpaper II - For Beginners
+*
+
+*<a href="http://farm4.static.flickr.com/3551/3399154991_be6c775aa4_o.jpg"><img class="alignnone" title="Linux Commands Wallpaper II - For beginners" src="http://farm4.static.flickr.com/3551/3399154991_9666881a0e_m.jpg" alt="" width="240" height="192" /></a>
+*
+
+*Unix/Linux Command Reference List*
+
+[scribd id=14016692 key=key-25yim6sjrk9xpz4swrih]
+
+*THE ONE PAGE LINUX MANUAL*
+
+[scribd id=14016685 key=key-178nflr4zhbqjxxz0cbh]
+
+<span style="color:#ff0000;">*Important Note: *Dear guys & gals please note that these interesting material were not created by me. All the credit should go to the original authors and owners. I hope they wont get angry with me or sue me for posting these stuff here.</span>
+
+Thanx Dhanaja for the idea...

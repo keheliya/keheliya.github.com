@@ -1,0 +1,31 @@
+---
+layout: post
+title: Race for the primes
+---
+
+මට හිතෙන හැටියට modern technology is all about utilizing every bit of power to go for something better and it is sometimes disturbing to think about unused processor power of millions of computers, running all over the world at a given moment.
+
+How about using the processor of our PC to find the biggest Mersenne prime and  win some cash? Recently i got to find about the <a href="http://www.mersenne.org/prize.htm" target="_blank">GIMPS</a> project which, enables the users to run a small software in the background, while the PC is switched on, and it is calculating all the time for a Mersenne prime number.
+
+<img class="alignnone" title="GIMPS project" src="http://mersenne.org/fill3.gif" alt="" width="80" height="101" />
+
+By the way..what is a Mersenne prime?..and in Wikipedia..
+
+<img class="alignright" title="marin-mersenne" src="http://marin-mersenne.univ-paris1.fr/pere_marin_mersenne.jpg" alt="" width="209" height="250" />
+bq. a *Mersenne number*
+
+is a positive integer that is one less than a <a title="Power of two" href="http://en.wikipedia.org/wiki/Power_of_two">power of two</a>:
+
+<dl> <dd><img class="tex" src="http://upload.wikimedia.org/math/d/a/c/daca120785740a88ee3b21d459fef00d.png" alt=" M_n=2^n-1.\," /></dd> </dl>Some definitions of Mersenne numbers require that the expon
+
+ent _n_ be prime.
+bq. A *Mersenne prime* is a Mersenne number that is <a title="Prime number" href="http://en.wikipedia.org/wiki/Prime_number">prime</a>.
+Recently, On August 23rd, a UCLA computer discovered the 45th known Mersenne prime, 2^43,112,609^-1, a mammoth <a href="http://prime.isthe.com/chongo/tech/math/prime/m43112609/prime-c.html">12,978,189 digit number</a>!
+
+And, On September 6th, the 46th known Mersenne prime, 2^37,156,667^-1, a <a href="http://prime.isthe.com/chongo/tech/math/prime/m37156667/prime-c.html">11,185,272 digit number</a> was found by <a href="http://primzahlen.de/">Hans-Michael Elvenich</a> in Langenfeld near Cologne, Germany!
+
+Although I'm yet to find the 47th one I can say that The Great Internet Mersenne Prime Search is a nice thing to try since it does not interfere with your system's performance or network traffic.
+
+But...the site gives the *WARNING:* Running the program continuously will use about 40 watts of additional power - your electric bill will go up.
+
+;-)

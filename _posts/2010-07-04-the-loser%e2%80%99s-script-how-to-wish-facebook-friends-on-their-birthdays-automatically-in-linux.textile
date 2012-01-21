@@ -1,0 +1,96 @@
+---
+layout: post
+title: The Loser’s Script - How to wish facebook friends on their birthdays automagically in linux
+---
+
+Yes, It does what it tells it does. It may be one of the geekiest ways of wishing your friends on their birthdays. You won’t have to check every morning for people having birthdays, and go on writing on their walls. The script does it for you. And believe me, when you wish someone using a script for the first time, it feels terrible. You will start to see the fickleness, frailness of human relationships, freaks and fakes around us in a Web 2.0 world. But, if you dare to go forward and test it for yourself, scroll down to see the step-by-step instructions.
+
+*Step 1: Install cURL and Gnome-schedule*
+
+<a href="http://curl.haxx.se/">cURL</a> is a command line tool for transferring data using various<a href="http://en.wikipedia.org/wiki/Protocol_%28computing%29"> protocols</a>. <a href="http://gnome-schedule.sourceforge.net/">Gnome-schedule</a> is a GUI for managing cron-jobs. Install them by running the famous command
+
+[sourcecode language="text" light="true"]sudo apt-get install curl gnome-schedule[/sourcecode]
+
+*Step 2: Setup a new application*
+Goto <a href="http://www.facebook.com/developers/">http://www.facebook.com/developers/</a> and setup a new application. Fill in all the required fields. Don’t forget to set ‘*Application Type*’ to ‘*Desktop*’. Remember the ‘*Application ID*’ and ‘*Application secre*t’ given in the end of the process.
+
+<a href="http://galpotha.files.wordpress.com/2010/07/screenshot-facebook-developers-flock.png"><img class="aligncenter size-full wp-image-233" title="Screenshot-Facebook | Developers - Flock" src="http://galpotha.files.wordpress.com/2010/07/screenshot-facebook-developers-flock.png" alt="" width="460" height="363" /></a>
+
+*Step 3: Request an OAuth access token with the proper permissions*
+<a href="http://developers.facebook.com/docs/api#authorization">Facebook Graph API authorization documentation</a> Has a detailed explanation about this. But if you are in a hurry,
+<ol>
+	<li>Enter the following URL in your browser, replacing YOUR_APPLICATION_ID with the *application ID* you got in the earlier step.
+[sourcecode language="text" light="true"]https://graph.facebook.com/oauth/authorize?client_id=YOUR_APLICATION_ID&amp;redirect_uri=http://www.facebook.com/connect/login_success.html&amp;type=user_agent&amp;display=popup&amp;scope=offline_access,publish_stream,friends_birthday[/sourcecode]
+
+<a href="http://galpotha.files.wordpress.com/2010/07/auth-dialog-example.png"></a>
+<p style="text-align:center;"><img title="auth-dialog-example" src="http://galpotha.files.wordpress.com/2010/07/auth-dialog-example.png" alt="" width="460" height="245" />
+
+
+</li>
+	<li>After a successful login and granting necessary permissions,  you will be given a verification code. Save it for later use.</li>
+	<li>Enter the following URL in your browser, replacing YOUR_APPLICATION_ID with *‘Application ID’* and YOUR_API_SECRET with *‘Application secret'* you got earlier, and VERIFICATION_CODE with the *code* you got in the previous step.
+[sourcecode language="text" light="true"]https://graph.facebook.com/oauth/access_token?client_id=YOUR_APLICATION_ID&amp;redirect_uri=http://www.facebook.com/connect/login_success.html&amp;client_secret=YOUR_API_SECRET&amp;code=VERIFICATION_CODE[/sourcecode]</li>
+	<li>Now you will be given the precious ‘*Access Token*’. Save it somewhere</li>
+</ol>
+<p style="padding-left:30px;">*WARNING:* Facebook does not recommend following this procedure and storing Access Tokens or Application secrets in desktop applications, because if somebody gets hold of that code, you are dead. I mean your facebook profile security is severely compromised and can be used in any malicious way they desire.
+
+
+*Step 4: Writing the script*
+No. Actually you just have to copy the following script I wrote and save it in a file like ‘*/home/yourName/birthdayscript.sh’* after  entering THE precious access token of yours in the proper place.
+
+[sourcecode language="bash" wraplines="false"]
+#!/bin/bash
+
+NOW=$(date +"%m/%d")
+
+#Enter your access token below within quotations
+ACCESS_TOKEN="blah-blah-blah-your-precious-access-token"
+
+#Get the names and UIDs of your unfortunate friends born on a day like today
+curl "https://api.facebook.com/method/fql.query?access_token=$ACCESS_TOKEN&query=SELECT%20first_name,uid%20from%20user%20where%20uid%20in%20(SELECT%20uid2%20from%20friend%20where%20uid1=564121985)AND%20substr(birthday_date,0,5)%20==%20'$NOW'" > birthdaywishtemp.xml
+
+names=`sed -n -e 's/.*<first_name>\(.*\)<\/first_name>.*/\1/p' birthdaywishtemp.xml`
+ids=`sed -n -e 's/.*<uid>\(.*\)<\/uid>.*/\1/p' birthdaywishtemp.xml`
+
+F_ARRAY=( `echo ${names}` )
+U_ARRAY=( `echo ${ids}` )
+
+#Wish each of them with the same old boring message
+for (( i = 0 ; i < ${#U_ARRAY[@]} ; i++ ))
+do
+curl 'https://graph.facebook.com/${U_ARRAY[$i]}'
+curl -F 'access_token='$ACCESS_TOKEN'' \
+    -F 'message=Hey, Happy Birthday...'${F_ARRAY[$i]} \
+    https://graph.facebook.com/${U_ARRAY[$i]}/feed >> birthdaywishbackup.log
+
+#Let you know the progress
+echo "Wished ${F_ARRAY[$i]}" >> birthdaywishbackup.log
+done
+
+echo "Completed on $(date)" >> birthdaywishbackup.log
+[/sourcecode]
+
+Now you can browse to the location where you saved the script via terminal and execute the script with the command
+
+[sourcecode language="text" light="true"]./birthdayscript.sh[/sourcecode]
+
+And you can see the progress in the file *birthdaywishbackup.log*
+
+*Step 5: Automating the script*
+Yes, it is of no use if you have to run this manually each and everyday to wish somebody. So you can schedule it to run and write automagically on walls of birthday boys/gals everyday. If you are the geekiest type you can do it using a cron-job and you won’t need this tutorial anyway. But if you are interested, you can find how to do that <a href="http://www.unixgeeks.org/security/newbie/unix/cron-1.html">here</a>.
+For the ordinary geek, there’s this dumb-simple GUI based tool called <a href="http://gnome-schedule.sourceforge.net/">gnome-schedule</a>. Run the command
+
+[sourcecode language="text" light="true"]gnome-schedule[/sourcecode]
+
+in a terminal and you will be able to come up with a scheduled cron-job like the following in few easy steps.
+
+<a href="http://galpotha.files.wordpress.com/2010/07/screenshot-configure-scheduled-tasks.png"><img class="aligncenter size-full wp-image-232" title="Screenshot-Configure Scheduled Tasks" src="http://galpotha.files.wordpress.com/2010/07/screenshot-configure-scheduled-tasks.png" alt="" width="445" height="205" /></a>
+
+*IMPORTANT:* Make sure you set a time of the day that you will keep your computer switched on, because a cron-job is not god, and doesn’t know how turn on the computer it is running, by itself :-D
+
+It's done!!! Enjoy being a lazy, cold-hearted nerd, who has no sense of finer things in life.
+
+*UPDATE: *With all the controversial comments about this post here and in <a href="http://www.reddit.com/r/geek/comments/clufx/the_losers_script_how_to_wish_facebook_friends_on/">Reddit</a>, I found an <a href="http://jasonmichaeldouglas.wordpress.com/2010/06/02/it-was-your-birthday-social-media-didnt-tell-me-that/">article</a> written by another <a href="http://twitter.com/jasondouglas">one</a> who has thought on the same lines which totally explains my idea behind this script and blog post*. *Read and post your comments
+h3. <a title="Permanent link to It Was Your Birthday? Social Media Didn’t Tell Me That!" rel="bookmark" href="http://jasonmichaeldouglas.wordpress.com/2010/06/02/it-was-your-birthday-social-media-didnt-tell-me-that/">It Was Your Birthday? Social Media Didn’t Tell Me That!</a> by <a title="Jason Douglas" rel="bookmark" href="http://twitter.com/jasondouglas">Jason Douglas
+</a>
+

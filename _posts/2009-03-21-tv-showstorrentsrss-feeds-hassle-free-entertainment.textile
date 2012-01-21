@@ -1,0 +1,22 @@
+---
+layout: post
+title: TV shows+Torrents+RSS feeds = Hassle free entertainment
+---
+
+Except the daily dose of surfing, social networking, (<a href="http://twitter.com/keheliya">micro</a>) blogging (& of course coding) reasons there is one other special factor which keep our eyes glued to the monitor screens.. It is 'TV shows'. These varies from Heroes, Lost, House MD, Prison Break, Greys Anatomy, My name is Earl, The big bang theory to all the other weird (but less suspicious names) :-D on the planet. For many of us downloading the favourite TV show is part of the weekly routine.
+
+And  as the technology gets smarter & we are getting lazier, people find easier ways of automating even these simple tasks, like searching for TV show torrents in the internet. As always RSS feeds come to the rescue. Every major BitTorrent client (uTorrent, Azureus, kTorrent) has the RSS feed scanner plugin which automates the task of searching & downloading these TV show torrents.
+
+<img src="http://farm4.static.flickr.com/3435/3371145283_e1fd0a3811.jpg" alt="http://farm4.static.flickr.com/3435/3371145283_e1fd0a3811.jpg" />
+
+*So where can I find feeds of my favourite TV show?*
+
+There are many sites <a href="http://tvrss.net/feeds/">(tvRSS</a> ,<a href="http://rsstorrents.com/"> RSSTorrents,</a> <a href="http://rsstorrents.com/">FeedMyTorrents</a> ,<a href="http://www.torrentbox.com">TorrentBox</a> for example) where we can browse through all the recent TV shows & find the rss feeds of the ones we like. After that, simply add that feed URL to your torrent client's RSS feed scanner which will display a recent set of episodes. And the list will be updated as soon as a new episode is on the internet. You can then choose to download, filter, skip episodes that are available.
+
+<img class="alignright" src="http://feedmytorrents.com/images/fmt.png" alt="http://feedmytorrents.com/images/fmt.png" />
+
+I prefer <a href="http://www.FeedMyTorrents.com">FeedMyTorrents</a> site because it has a wide range of tv shows & do not include duplicate episodes in their feeds. Give it a try & you'll enjoy the benefit of saving time & hassle finding the TV torrents every week. Enjoy!
+
+For more information Read:
+<a href="http://torrentfreak.com/top-10-bittorrent-and-rss-tips-081130/">Top 10 BitTorrent & RSS tips</a>
+<div class="flockcredit" style="text-align:right;color:#CCC;font-size:x-small;">Blogged with the <a title="Flock Browser" href="http://www.flock.com/blogged-with-flock" target="_new">Flock Browser</a></div>

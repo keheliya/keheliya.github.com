@@ -1,0 +1,20 @@
+---
+layout: post
+title: Edit or shift subtitles easily with Gaupol
+---
+
+<!-- 		@page { size: 8.5in 11in; margin: 0.79in } 		P { margin-bottom: 0.08in } -->It's the holiday you were waiting for after a few days hard work. You settle at the monitor, looking forward to a movie marathon... Few minutes in to the movie and you realize that it's not going to work.The accent of the actors and foreign language phrases... you can't get a thing! So you go for the subtitles..
+After trying many subtitle <a href="http://opensubtitles.org/">sources</a> all over the web, you find every dialogue is either few seconds late or early than the subtitles! Trying to synchronize the lips and the voices makes you feel dizzy... What a day its turning out to be...
+Don't panic. Here comes <a href="http://home.gna.org/gaupol/index.html">Gaupol</a> - The free and open source subtitle editor. Built for GNOME using GTK, it supports a variety of subtitles including .txt, .sub, .srt and .ssa
+
+To install use synaptic package manager or type the usual line in the terminal
+bq. sudo apt-get install gaupol
+Then open your subtitle file in gaupol to edit as you wish. [Tools] >> [Shift Positions] will let you shift it by a desired time interval to synchronize it with the movie. Save the modified file and it's done!
+
+Sit back and enjoy the movie.
+
+<img src="http://farm4.static.flickr.com/3534/3765121571_f75de7a113_o.png" alt="" />
+
+<img src="///tmp/moz-screenshot.jpg" alt="" />
+
+<img src="http://farm3.static.flickr.com/2421/3765121579_07813eae58_o.png" alt="" />
