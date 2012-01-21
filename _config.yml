@@ -9,14 +9,14 @@ var:
   tags_path : /tags.html
   rss_path: /atom.xml
 
-production_url : http://username.github.com # or your custom domain name
-title : Jekyll Bootstrap
+production_url : http://keheliya.github.com # or your custom domain name
+title : iThink
 
 author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
+  name : Keheliya Gallaba
+  email : keheliya.gallaba@gmail.com
+  github : keheliya
+  twitter : keheliya
   feedbuder : feedname
 
 exclude: .rbenv-version
