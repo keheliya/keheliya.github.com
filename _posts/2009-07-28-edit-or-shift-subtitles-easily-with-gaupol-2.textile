@@ -8,7 +8,7 @@ After trying many subtitle <a href="http://opensubtitles.org/">sources</a> all o
 Don't panic. Here comes <a href="http://home.gna.org/gaupol/index.html">Gaupol</a> - The free and open source subtitle editor. Built for GNOME using GTK, it supports a variety of subtitles including .txt, .sub, .srt and .ssa
 
 To install use synaptic package manager or type the usual line in the terminal
-bq. sudo apt-get install gaupol
+<code> sudo apt-get install gaupol </code>
 Then open your subtitle file in gaupol to edit as you wish. [Tools] >> [Shift Positions] will let you shift it by a desired time interval to synchronize it with the movie. Save the modified file and it's done!
 
 Sit back and enjoy the movie.

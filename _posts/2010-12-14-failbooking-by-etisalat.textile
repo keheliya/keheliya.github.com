@@ -8,14 +8,14 @@ title: Failbooking by Etisalat
 </div>
 You may call me paranoid or over-cautious after reading this. I wanted to write about this long ago, as soon as I heard this advertisement and thought its totally insane. But I was busy. Thanks to the most gruelling bloodshed of recent times in one of the prestigious higher educational institutes of the country, I get the chance to pick one of the drafts left in my blog. Here it goes..
 
-<a href="http://galpotha.files.wordpress.com/2010/12/download-2.png">[gallery link="file" columns="4" orderby="ID"]
-</a>
+<img src="http://galpotha.files.wordpress.com/2010/12/download-2.png"/>
 
-<a href="http://galpotha.files.wordpress.com/2010/12/download-1.png">
-</a>
+
+<img src="http://galpotha.files.wordpress.com/2010/12/download-1.png"/>
+
 Recently, <a href="http://www.etisalat.lk">Etisalat</a>, a mobile service provider <a href="http://www.etisalat.lk/VASNetworking.cfm?page=FB">advertised</a> a scheme for users to chat in facebook via SMS and the two ways they are suggesting the users to register has fundamental flaws. As the method 1 they want users to <a href="http://fb.etisalat.lk/fb/User.action?action=Register">enter</a> their facebook username and password at their own site <a href="http://www.etisalat.lk">www.etisalat.lk</a>. In the next method they <a href="http://fb.etisalat.lk/fb/User.action?action=Help">suggest</a> users to SMS their username and password to a number.
 
-As it is being discussed over and over again by people like <a title="Jeff Atwood" rel="homepage" href="http://www.codinghorror.com/">Jeff Atwood</a> and <a href="http://www.25hoursaday.com/weblog/default.aspx">Dare Obasanjo</a>, as a third party, its wrong to ask the user to "<a href="http://www.codinghorror.com/blog/2008/06/please-give-us-your-email-password.html">Please Give Us Your Email Password</a>". You may be trying to help. But some may consider it offensive. You are asking for the keys of their online identity.
+As it is being discussed over and over again by people like <a title="Jeff Atwood" rel="homepage" href="http://www.codinghorror.com/">Jeff Atwood</a> and <a href="http://www.25hoursaday.com/weblog/default.aspx">Dare Obasanjo</a>, as a third party, its wrong to ask the user to <a href="http://www.codinghorror.com/blog/2008/06/please-give-us-your-email-password.html">_Please Give Us Your Email Password_</a>. You may be trying to help. But some may consider it offensive. You are asking for the keys of their online identity.
 
 Next thing, is it ok to allow users get comfortable with entering their credentials in all sorts of random places, and make them <a href="http://www.25hoursaday.com/weblog/PermaLink.aspx?guid=59a03a48-3584-465e-8072-a254ec933b32">more susceptible to phishing attacks</a>?
 

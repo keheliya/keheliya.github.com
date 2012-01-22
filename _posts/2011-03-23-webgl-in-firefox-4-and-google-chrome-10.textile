@@ -13,33 +13,33 @@ h4. In Google Chrome
 
 
 
-You just have to run it with '--ignore-gpu-blacklist' startup switch.
-At the terminal use the command[sourcecode language="bash"]
-google chrome --ignore-gpu-blacklist[/sourcecode]
+You just have to run it with <code>'--ignore-gpu-blacklist'</code> startup switch.
+At the terminal use the command<code>
+google chrome --ignore-gpu-blacklist</code>
 
 h4. In Mozilla Firefox
 
 
 
-If you are using an Intel graphics card, you might have to install <a href="http://en.wikipedia.org/wiki/Mesa_3D">OSMesa</a> first, which is a software implementation for OpenGL which enables off-screen rendering. You'll find the package as 'libosmesa6-dev' in Synaptic Package Manager or try the old school method[sourcecode language="bash"]
-sudo apt-get install libosmesa6-dev[/sourcecode]
+If you are using an Intel graphics card, you might have to install <a href="http://en.wikipedia.org/wiki/Mesa_3D">OSMesa</a> first, which is a software implementation for OpenGL which enables off-screen rendering. You'll find the package as 'libosmesa6-dev' in Synaptic Package Manager or try the old school method<code>
+sudo apt-get install libosmesa6-dev</code>
 
-Then run the following command to run Firefox, bypassing the blacklist.[sourcecode language="bash"]
-MOZ_GLX_IGNORE_BLACKLIST=1 firefox[/sourcecode]
+Then run the following command to run Firefox, bypassing the blacklist.<code>
+MOZ_GLX_IGNORE_BLACKLIST=1 firefox</code>
 
-Goto about:config and search for following parameters and make sure they are set as below.[sourcecode]
+Goto about:config and search for following parameters and make sure they are set as below.<code>
 webgl.disabled:false
 webgl.force-enabled:false
 webgl.force_osmesa:false
 webgl.osmesalib:/usr/lib/libOSMesa.so
 webgl.prefer-native-gl:false
 webgl.shader_validator:true
-webgl.verbose:false[/sourcecode]
+webgl.verbose:false</code>
 
-To check whether its working properly Goto a page like <a href="http://bodybrowser.googlelabs.com/">Google Body Browser</a> or examples like <a href="http://learningwebgl.com/lessons/lesson03/index.html">this</a> at Learning WebGL. To know more about your graphic card in Ubuntu try the following commands.[sourcecode gutter="false"]
+To check whether its working properly Goto a page like <a href="http://bodybrowser.googlelabs.com/">Google Body Browser</a> or examples like <a href="http://learningwebgl.com/lessons/lesson03/index.html">this</a> at Learning WebGL. To know more about your graphic card in Ubuntu try the following commands.<code>
 inxi -G
 lshw -C video
-glxinfo | grep render[/sourcecode]
+glxinfo | grep render</code>
 
 Here are some more related resources:
 Learning WebGL <a href="http://learningwebgl.com/blog/">http://learningwebgl.com/blog/</a>

@@ -11,7 +11,7 @@ h3. Use Google to download movies for free
 
 
 This a little bit of a trick to search for movies, TV series or any video that is available for free on servers all around the world. Just copy the following code into Google search box and press enter.
-bq. -inurl:(htm|html|php) intitle:"index of" +"last modified" +"parent directory" +description +size +(wmv|avi|mpg) "dvdrip+xvid"
+<code> -inurl:(htm|html|php) intitle:"index of" +"last modified" +"parent directory" +description +size +(wmv|avi|mpg) "dvdrip+xvid"</code>
 <p style="text-align:left;"><a title="Screenshot-20% - 1-5 - 49.1 KB-s - DownThemAll!.png by keheliya, on Flickr" href="http://www.flickr.com/photos/28556607@N04/3148425572/"><img class="aligncenter" src="http://farm4.static.flickr.com/3248/3148425572_088f82747b_o.png" alt="Screenshot-20% - 1-5 - 49.1 KB-s - DownThemAll!.png" width="642" height="180" /></a>
 Just substitute the word "dvdrip+xvid" with the name of the film, if you think it is more likely that the file will be available with that filename. Search Results will direct you to the directories that videos are available. Words like "dvdrip","xvid","axxo" generated very successful results for me. Since it gives links to directly download from the server, it is way faster than torrents මට හිතෙන හැටියට.
 h3. When you own google...
