@@ -1,1 +1,42 @@
-testing
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+/* CSS goes here. */
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v0.min.js"></script>
+<script>
+var width = 960,
+    height = 1160;
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+d3.json("lk.json", function(error, lk) {
+  console.log(lk);
+  console.log(lk.objects.subunits1);
+var subunits = topojson.object(lk, lk.objects.subunits1);
+
+var projection = d3.geo.albers()
+    .center([0, 4.5])
+    .rotate([-79, 0])
+    .parallels([5, 10])
+    .scale(6000)
+    .translate([width / 2, height / 2]);
+
+var path = d3.geo.path()
+    .projection(projection);
+
+
+svg.append("path")
+    .datum(subunits)
+    .attr("d", path);
+
+
+});
+
+</script>
