@@ -1,8 +1,0 @@
----
-layout: post
-title: How Sri Lankan Tweeps are connected in Facebook
----
-
-I couldn't resist the urge to create a visualization while playing with <a href="http://gephi.org/">gephi</a> for my GSoC project over the weekend. The <a href="http://apps.facebook.com/netvizz/">Netvizz</a> Facebook application was used to get the data extracted from the <a href="http://www.facebook.com/home.php?sk=group_168464889847340">Tweeps</a> group, a hangout spot for Sri Lankan Twitter users. Imported the <a href="http://guess.wikispot.org/The_GUESS_.gdf_format">gdf</a> file to gephi and did the coloring based on the clusters. Did slight modifications to the Radial Axis layout for legibility of labels. <a href="http://www.gimp.org/">Gimp</a> was used to add the final touches. Node sizes are proportional to the degree of each node (the number of people each person is connected to, within the network). Colors represent the sub networks identified within the social network by the <a href="http://stackoverflow.com/questions/3523641/newmans-modularity-clustering-for-graphs">Modularity clustering</a> tool. Click on the image for a larger version.
-
-<a href="http://galpotha.files.wordpress.com/2011/06/tweepsmod.jpg"><img class="aligncenter size-full wp-image-367" title="How Sri Lankan Tweeps are connected in Facebook" src="http://galpotha.files.wordpress.com/2011/06/tweepsmod.jpg" alt="" width="460" height="209" /></a>Download Sizes: Medium [<a href="http://galpotha.files.wordpress.com/2011/06/tweepsmod.jpg">1845x841</a>] Large [<a href="http://galpotha.files.wordpress.com/2011/06/tweepsmod.jpg">3690x1682</a>] 

@@ -1,4 +1,0 @@
----
-layout: default
----
-{% include themes/the-minimum/post.html %}
