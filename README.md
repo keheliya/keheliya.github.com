@@ -42,4 +42,4 @@ The master and gh-pages branch do not share the same ancestry. Please treat them
 
 ## Note
 
-Site ofline and backed up for later use.
+Site offline and backed up for later use.
