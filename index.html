@@ -1,42 +1,65 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
 
-/* CSS goes here. */
+<html xmnls="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Keheliya Gallaba, Software Engineer, WSO2 Inc.</title>
+		<link rel = "stylesheet" type="text/css" href="style.css" />
+		<style type="text/css"></style>
+	</head>
 
-</style>
-<body>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://d3js.org/topojson.v0.min.js"></script>
-<script>
-var width = 960,
-    height = 1160;
+	<body>
 
-var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height);
+		<div id="content-wrapper">
 
-d3.json("lk.json", function(error, lk) {
-  console.log(lk);
-  console.log(lk.objects.subunits1);
-var subunits = topojson.object(lk, lk.objects.subunits1);
+			<div id = "header">
+				<div id="logo">
+					<div id="page-title">
+            <a href="index.html">Keheliya Gallaba</a>
+          </div>
+          <div id="tagline">
+            Software Engineer, <a href="http://wso2.com" target="_blank">WSO2</a> <a href="http://en.wikipedia.org/wiki/Sri_Lanka" target="_blank">Sri Lanka</a>
+          </div>
+	      </div>
+				<!--/logo-->
+	      <div id="nav" class="right">
+            <a href="index.html">home</a>
+            <a href="publications.html">publications</a>
+            <a href="projects.html">projects</a>
+            <a href="keheliya_cv.pdf">cv</a>
+        </div>
+        <!--/nav-->
+			</div>
+			<!--/header-->
 
-var projection = d3.geo.albers()
-    .center([0, 4.5])
-    .rotate([-79, 0])
-    .parallels([5, 10])
-    .scale(6000)
-    .translate([width / 2, height / 2]);
+			<div id="content">
 
-var path = d3.geo.path()
-    .projection(projection);
+				<div id="left-column">
+          <div class="people-thumb">
+              <img title="Keheliya Gallaba" src="images/keheliya.png" alt="Keheliya Gallaba"/>
+          </div>
+          keheliya[at]wso2.com
+					<br />
+					<a href="http://www.twitter.com/keheliya" target="_blank">@keheliya</a>
+					<br />
+					<a href="http://www.linkedin.com/in/keheliya" target="_blank">linkedin/keheliya</a>
+					<br />
+					<a href="http://about.me/keheliya" target="_blank">about.me/keheliya</a>
+        </div>
+        <!--/left-column-->
 
+        <div id="right-column">
 
-svg.append("path")
-    .datum(subunits)
-    .attr("d", path);
-
-
-});
-
-</script>
+						<h2>about me</h2>
+						<div class="bio">
+                <div class="text">
+                    An Oompa Loompa of Computer Science. Rejoices in making people's lives easier, better and happier using technology. Loves boxes with blinking lights. Lives in Colombo, Sri Lanka
+                </div>
+            </div>
+        </div>
+				<!--/right-column-->
+			</div>
+			<!--/content-->
+		</div>
+		<!--/content-wrapper
+	</body>
+</html>
