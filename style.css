@@ -62,7 +62,7 @@ text-align: left;
 }
 
 #page-title{
-font-family: Verdana, Helvetica, Arial, sans-serif;
+font-family: 'Armata', sans-serif;
 font-size: 36px;
 width: 450px;
 height: 37px;
@@ -70,7 +70,7 @@ clear:both;
 }
 
 #tagline{
-font-family: Verdana, Helvetica, Arial, sans-serif;
+font-family: 'Armata', sans-serif;
 font-size: 18px;
 width: 450px;
 height: 20px;
