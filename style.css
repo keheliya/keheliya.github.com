@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* CSS InfoVis Group on cs.ubc.ca */
+/*Adapted from CSS InfoVis Group on cs.ubc.ca */
 
 
 /* Typeface, Text Size, Colour */
@@ -28,8 +28,7 @@ margin: 0px 0 10px 0;
 }
 
 #nav a {
-font-variant: small-caps;
-font-family:Frutiger,geneva,verdana,trebuchet,arial,sans-serif;
+font-family: 'Special Elite', cursive;
 
 font-size: 16px;
 color: #333333;
@@ -336,113 +335,3 @@ margin: 25px 0px;
 margin-bottom: 30px;
 }x
 
-/*body {
-
- margin: 2% 25% 2% 25%;
- font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
- color: #000;
- font-size: 13px;
- line-height: 16px;
- vertical-align: middle;
- background-color : #C8C8C8;
- }
-
-#top {
-  clear: both;
-  border : 1px solid #999;
-  background-color : #EEE;
-  padding-left : 5%;
-  padding-right : 5%;
-}
-
-#content {
-  clear: both;
-  padding : 2% 5% 2% 5%;
-  border : 1px solid #999;
-  vertical-align: middle;
-  background-color : #FFF;
-}
-
-hr {
-clear: both;
-color: #fff;
-line-height: 0px;
-}
-
-#abstract { width: 65%; margin-right: 2%; float: right;
-
-}
-
-#citation { clear: both;
-
-}
-
-#project {  margin: 2% 2% 2% 2%; width: 25%; border: 1px solid #999;  float: left;
-
-}
-
-#contact { width: 25%; margin-right: 5%; float: right;
-
-}
-
-#homecontact { width: 25%; margin-left: 2%; float: left;
-}
-
-#calendar { margin-left: 5%; width: 60%; margin-right: 5%; border: 1px solid #999;  float: left;
-
-}
-
-#container { width: 100%; clear: both;
-
-}
-
-#footer {
-border : 1px solid #999;
-  background-color : #EEE;
-  font-size: small;
-   clear: both;
-}
-
-#flag {
-
-margin-left: 0%; margin-right: 0%;
-width: 11%; height: 7%;
-
-}
-
-h1 {
- font-size: 24px;
- font-weight: bold;
- margin: 15px 0 15px 0;
- color: #333333;
- clear: both;
-}
-
-h2 {
- font-variant: small-caps;
- font-size: 16px;
- font-weight: bold;
- color: #333333;
- margin-top: 10px;
- margin-bottom: 10px;
- clear: both;
-}
-
-h3 {
- font-size: 14px;
- font-weight: bold;
- color: #333333;
- margin-top: 10px;
- margin-bottom: 10px;
- clear: both;
-}
-
-a, a:visited, a:hover {
- color: #555555;
- text-decoration: none;
-}
-
-
-a:hover, a.nav:hover {
- color: #669933;
-}*/
