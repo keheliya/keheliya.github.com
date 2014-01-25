@@ -6,7 +6,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Armata|Autour+One|Special+Elite' rel='stylesheet' type='text/css'>
 	<style type="text/css"></style>
 	<link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
-	<meta name="google-site-verification" content="-x4fMLI3aTxfbNF4hdFusCyWdb38Nn5_nKQW5T8yti0" />
+	<meta name="google-site-verification" content="-x4fMLI3aTxfbNF4hdFusCyWdb38Nn5_nKQW5T8yti0" />	
 </head>
 
 <body>
@@ -58,11 +58,32 @@
 						An Oompa Loompa of Computer Science. Rejoices in making people's lives easier, better and happier using technology. Loves boxes with blinking lights. Born and bred in Colombo, Sri Lanka. Lives in Vancouver, BC.
 					</div>
 				</div>
+				<h2>recent writeups</h2>
+				<div id="test"></div>
 			</div>
 			<!--/right-column-->
 		</div>
 		<!--/content-->
 	</div>
 		<!--/content-wrapper-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<script src="jquery.feeds.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+$('#test').feeds({
+	feeds: {
+		feed1: 'http://keheliya.blogspot.com/feeds/posts/default?alt=rss',
+		feed2: 'http://galpotha.wordpress.com/feed/'
+	},
+	max: 4,
+	preprocess: function ( feed ) {
+		// Change the publishedDate format from UTC to dd-mm-yyyy
+
+		// Inside the callback 'this' corresponds to the entry being processed
+		var date = new Date(this.publishedDate);
+		var pieces = [date.getDate(), date.getMonth()+1, date.getFullYear()]
+		this.publishedDate = pieces.join('-');
+	}
+});
+</script>
 	</body>
 </html>
