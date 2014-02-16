@@ -127,7 +127,9 @@ h4{
 	border-bottom:1px solid #0091ed;
 }
 
-
+.entry-date{
+	color:#7d7d7d;
+}
 
 #main_container_2{width:900px;height:auto;margin:0px 0 0 230px;padding:0px 0 40px 0; float:left; background-color:#fff; position:relative;-moz-box-shadow:0 0 6px #7d7d7d;-webkit-box-shadow:0 0 6px #7d7d7d;box-shadow:0 6px 6px #7d7d7d;}
 #header{width:1000px;height:160px;margin:auto;}

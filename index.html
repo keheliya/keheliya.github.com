@@ -103,6 +103,7 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="jquery.feeds.min.js" type="text/javascript"></script>
+<script src="moment.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 $('#test').feeds({
   feeds: {
@@ -114,13 +115,11 @@ $('#test').feeds({
     // Change the publishedDate format from UTC to dd-mm-yyyy
 
     // Inside the callback 'this' corresponds to the entry being processed
-/*    var date = new Date(this.publishedDate);
-    var pieces = [date.getDate(), date.getMonth()+1, date.getFullYear()]
-    this.publishedDate = pieces.join('-');*/
+    this.publishedDate = moment(new Date(this.publishedDate)).fromNow();
   },
   entryTemplate:   '<div class="source-<!=source!> archive_post">' +
   '<a class="entry-title" target="_blank" href="<!=link!>" title="<!=title!>"><img class="post_thumb" border="" title="" alt="" src="images/<!=source!>.jpg"><!=title!></a>' +
-  '<div class="entry-date"><i>Wrote on <!=publishedDate!></i></div>' +
+  '<div class="entry-date"><i>Wrote <!=publishedDate!></i></div>' +
   '<div class="entry-content"><!=contentSnippet!></div>' +
   '</div>'
 });
