@@ -126,27 +126,52 @@
 <div style="height:1px;"></div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<script src="jquery.feeds.min.js" type="text/javascript"></script>
 <script src="moment.min.js" type="text/javascript"></script>
+<script src="https://static.sekandocdn.net/static/feednami/feednami-client-v1.1.js"></script>
 <script type="text/javascript">
-$('#test').feeds({
-  feeds: {
-    bs: 'http://keheliya.blogspot.com/feeds/posts/default?alt=rss',
-    wp: 'http://galpotha.wordpress.com/feed/'
-  },
-  max: 1,
-  preprocess: function ( feed ) {
-    // Change the publishedDate format from UTC to dd-mm-yyyy
-
-    // Inside the callback 'this' corresponds to the entry being processed
-    this.publishedDate = moment(new Date(this.publishedDate)).fromNow();
-  },
-  entryTemplate:   '<div class="source-<!=source!> archive_post">' +
-  '<a class="entry-title" target="_blank" href="<!=link!>" title="<!=title!>"><img class="post_thumb" border="" title="" alt="" src="images/<!=source!>.jpg"><!=title!></a>' +
-  '<div class="entry-date"><i>Wrote <!=publishedDate!></i></div>' +
-  '<div class="entry-content"><!=contentSnippet!></div>' +
-  '</div>'
+var addEntries = function (url){
+  feednami.loadGoogleFormat(url,function(result){
+        if(result.error) {
+            console.log(result.error);
+        } else {
+            entries = result.feed.entries;
+            for(var i = 0; i < 3; i++){
+                var entry = entries[i];
+                entry.pubDate = moment(new Date(entry.publishedDate)).fromNow();
+                $('#test').append('<div class="source-<!=source!> archive_post">' +
+                '<a class="entry-title" target="_blank" href="'+entry.link+'" title="'+entry.title+'">'+entry.title+'</a>' +
+                '<div class="entry-date"><i>Wrote '+entry.pubDate+'</i></div>' +
+                '<div class="entry-content">'+entry.contentSnippet+'<a target="_blank" href="'+entry.link+'">...</div>' +
+                '</div>');
+            }  
+        }
+    });
+}
+$(document).ready(function() {
+    var bg_url = 'http://keheliya.blogspot.com/feeds/posts/default?alt=rss';
+    var wp_url = 'http://galpotha.wordpress.com/feed/';
+    addEntries(bg_url);
+    addEntries(wp_url);    
 });
+
+// $('#test').feeds({
+//   feeds: {
+//     bs: 'http://keheliya.blogspot.com/feeds/posts/default?alt=rss',
+//     wp: 'http://galpotha.wordpress.com/feed/'
+//   },
+//   max: 1,
+//   preprocess: function ( feed ) {
+//     // Change the publishedDate format from UTC to dd-mm-yyyy
+
+//     // Inside the callback 'this' corresponds to the entry being processed
+//     this.publishedDate = moment(new Date(this.publishedDate)).fromNow();
+//   },
+  // entryTemplate:   '<div class="source-<!=source!> archive_post">' +
+  // '<a class="entry-title" target="_blank" href="<!=link!>" title="<!=title!>"><img class="post_thumb" border="" title="" alt="" src="images/<!=source!>.jpg"><!=title!></a>' +
+  // '<div class="entry-date"><i>Wrote <!=publishedDate!></i></div>' +
+  // '<div class="entry-content"><!=contentSnippet!></div>' +
+  // '</div>'
+// });
 </script>
 
 
