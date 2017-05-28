@@ -44,7 +44,7 @@
 
       <div id="header_container">
         <div id="headshot">
-          <img src="images/302e3f.png" align="middle"/>
+          <img src="images/portrait_keheliya.jpg" align="middle"/>
         </div>
 
         <div id="main_info_container">
@@ -74,7 +74,7 @@
         </div>    	
       </div>
     </div> 
-    <p>I am an incoming PhD student at McGill University, and will be advised by <a href="http://shanemcintosh.org/">Dr. Shane McIntosh</a>. In May 2016, I received my MASc in Electrical and Computer Enginnering, at the University of British Columbia. At UBC, I was advised by <a href="http://www.ece.ubc.ca/~amesbah/">Dr. Ali Mesbah</a> and <a href="http://www.cs.ubc.ca/~bestchai/">Dr. Ivan Beschastnikh</a>. My research is in software engineering, with emphasis on software analysis of modern web applications. I'm also interested in server-side JavaScript, Visual Analytics and Business Process Modeling.</p>
+    <p>I am a PhD student at McGill University, and is advised by <a href="http://shanemcintosh.org/">Dr. Shane McIntosh</a>. In May 2016, I received my MASc in Electrical and Computer Enginnering, at the University of British Columbia. At UBC, I was advised by <a href="http://www.ece.ubc.ca/~amesbah/">Dr. Ali Mesbah</a> and <a href="http://www.cs.ubc.ca/~bestchai/">Dr. Ivan Beschastnikh</a>. My research is in software engineering, with emphasis on software analysis of modern web applications. I'm also interested in server-side JavaScript, Visual Analytics and Business Process Modeling.</p>
     <p>In my free time, I enjoy <a href="https://www.goodreads.com/user/show/2767133-keheliya-gallaba">reading</a> and contributing to open source projects. <a href="http://keheliya.github.io/life/">This</a> is a timeline of important events in my life. And <a href="http://keheliya.github.io/sri-lanka-history/">here</a> is an illustrated timeline of the history of Sri Lanka, my motherland.</p>
 
 
@@ -137,7 +137,8 @@ var addEntries = function (url){
             entries = result.feed.entries;
             for(var i = 0; i < 3; i++){
                 var entry = entries[i];
-                entry.pubDate = moment(new Date(entry.publishedDate)).fromNow();
+                console.log(entry.pubDate)
+                entry.pubDate = moment(new Date(entry.pubDate)).fromNow();
                 $('#test').append('<div class="source-<!=source!> archive_post">' +
                 '<a class="entry-title" target="_blank" href="'+entry.link+'" title="'+entry.title+'">'+entry.title+'</a>' +
                 '<div class="entry-date"><i>Wrote '+entry.pubDate+'</i></div>' +
@@ -150,8 +151,46 @@ var addEntries = function (url){
 $(document).ready(function() {
     var bg_url = 'http://keheliya.blogspot.com/feeds/posts/default?alt=rss';
     var wp_url = 'http://galpotha.wordpress.com/feed/';
-    addEntries(bg_url);
-    addEntries(wp_url);    
+    // addEntries(bg_url);
+    // addEntries(wp_url);
+
+var url= bg_url;
+$.ajax({
+  type: 'GET',
+  url: "https://api.rss2json.com/v1/api.json?rss_url=" + url,
+  dataType: 'jsonp',
+  success: function(data) {
+    console.log(data)
+  entries = data.items;
+            for(var i = 0; i < 3; i++){
+                var entry = entries[i];
+                entry.pubDate = moment(new Date(entry.pubDate)).fromNow();
+                $('#test').append('<div class="source-<!=source!> archive_post">' +
+                '<a class="entry-title" target="_blank" href="'+entry.link+'" title="'+entry.title+'">'+entry.title+'</a>' +
+                '<div class="entry-date"><i>Wrote '+entry.pubDate+'</i></div>' +
+                '</div>');
+            }  
+  }
+});
+
+    // $.ajax(bg_url, {
+    //     accepts:{
+    //         xml:"application/rss+xml"
+    //     },
+    //     dataType:"xml",
+    //     success:function(data) {
+
+    //         $(data).find("item").each(function () {
+    //             var el = $(this);
+    //             console.log("------------------------");
+    //             console.log("title      : " + el.find("title").text());
+    //             console.log("link       : " + el.find("link").text());
+    //             console.log("description: " + el.find("description").text());
+    //         });
+    
+
+    //     }   
+    // });    
 });
 
 // $('#test').feeds({
