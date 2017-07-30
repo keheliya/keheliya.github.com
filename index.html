@@ -82,8 +82,8 @@
     <div class="archive_post"><img src="images/MSRlogo150.png" alt="" title="" border="" class="post_thumb" />
       <h4>Continuous Integration<a href="index.html#"></a></h4>
       <p></p><ul style="margin-left:100px">
-      <li>Marco Manglaviti, Eduardo Coronado-Montoya, <strong>K Gallaba</strong>, and Shane McIntosh: <a href="index.html#">An Empirical Study of the Personnel Overhead of Continuous Integration</a> <i>In Proceedings of the 14th International Conference on Mining Software Repositories (MSR), Mining challenge</i>, pp. To appear, 2017</li>
-      <li>Yusaira Khan, Yash Gupta, <strong>K Gallaba</strong>, and Shane McIntosh: <a href="index.html#">The Impact of the Adoption of Continuous Integration on Developer Attraction and Retention</a> <i>In Proceedings of the 14th International Conference on Mining Software Repositories (MSR), Mining challenge</i>, pp. To appear, 2017</li></ul>
+      <li>Marco Manglaviti, Eduardo Coronado-Montoya, <strong>K Gallaba</strong>, and Shane McIntosh: <a href="index.html#">An Empirical Study of the Personnel Overhead of Continuous Integration</a> <i>In Proceedings of the 14th International Conference on Mining Software Repositories (MSR), Mining challenge</i>, pp. 471-474, 2017</li>
+      <li>Yusaira Khan, Yash Gupta, <strong>K Gallaba</strong>, and Shane McIntosh: <a href="index.html#">The Impact of the Adoption of Continuous Integration on Developer Attraction and Retention</a> <i>In Proceedings of the 14th International Conference on Mining Software Repositories (MSR), Mining challenge</i>, pp. 491-494, 2017</li></ul>
     </div>
     <div class="archive_post"><img src="images/logoESEM.png" alt="" title="" border="" class="post_thumb" />
       <h4>Callbacks in JavaScript<a href="https://doi.org/10.1109/ESEM.2015.7321196"></a></h4>
@@ -129,30 +129,11 @@
 <script src="moment.min.js" type="text/javascript"></script>
 <script src="https://static.sekandocdn.net/static/feednami/feednami-client-v1.1.js"></script>
 <script type="text/javascript">
-var addEntries = function (url){
-  feednami.loadGoogleFormat(url,function(result){
-        if(result.error) {
-            console.log(result.error);
-        } else {
-            entries = result.feed.entries;
-            for(var i = 0; i < 3; i++){
-                var entry = entries[i];
-                console.log(entry.pubDate)
-                entry.pubDate = moment(new Date(entry.pubDate)).fromNow();
-                $('#test').append('<div class="source-<!=source!> archive_post">' +
-                '<a class="entry-title" target="_blank" href="'+entry.link+'" title="'+entry.title+'">'+entry.title+'</a>' +
-                '<div class="entry-date"><i>Wrote '+entry.pubDate+'</i></div>' +
-                '<div class="entry-content">'+entry.contentSnippet+'<a target="_blank" href="'+entry.link+'">...</div>' +
-                '</div>');
-            }  
-        }
-    });
-}
+
 $(document).ready(function() {
     var bg_url = 'http://keheliya.blogspot.com/feeds/posts/default?alt=rss';
     var wp_url = 'http://galpotha.wordpress.com/feed/';
-    // addEntries(bg_url);
-    // addEntries(wp_url);
+
 
 var url= bg_url;
 $.ajax({
@@ -171,46 +152,8 @@ $.ajax({
                 '</div>');
             }  
   }
+});   
 });
-
-    // $.ajax(bg_url, {
-    //     accepts:{
-    //         xml:"application/rss+xml"
-    //     },
-    //     dataType:"xml",
-    //     success:function(data) {
-
-    //         $(data).find("item").each(function () {
-    //             var el = $(this);
-    //             console.log("------------------------");
-    //             console.log("title      : " + el.find("title").text());
-    //             console.log("link       : " + el.find("link").text());
-    //             console.log("description: " + el.find("description").text());
-    //         });
-    
-
-    //     }   
-    // });    
-});
-
-// $('#test').feeds({
-//   feeds: {
-//     bs: 'http://keheliya.blogspot.com/feeds/posts/default?alt=rss',
-//     wp: 'http://galpotha.wordpress.com/feed/'
-//   },
-//   max: 1,
-//   preprocess: function ( feed ) {
-//     // Change the publishedDate format from UTC to dd-mm-yyyy
-
-//     // Inside the callback 'this' corresponds to the entry being processed
-//     this.publishedDate = moment(new Date(this.publishedDate)).fromNow();
-//   },
-  // entryTemplate:   '<div class="source-<!=source!> archive_post">' +
-  // '<a class="entry-title" target="_blank" href="<!=link!>" title="<!=title!>"><img class="post_thumb" border="" title="" alt="" src="images/<!=source!>.jpg"><!=title!></a>' +
-  // '<div class="entry-date"><i>Wrote <!=publishedDate!></i></div>' +
-  // '<div class="entry-content"><!=contentSnippet!></div>' +
-  // '</div>'
-// });
 </script>
 
 
