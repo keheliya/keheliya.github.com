@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/keheliya
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://keheliya.github.io
+  * I am keheliya (https://keybase.io/keheliya) on keybase.
+  * I have a public key ASA0r5kfp_R_5XKmo_h-gT9pa1dRZ_PXuPs-xFM-lddfMQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101706bc9270535eafad6e20d5187797d74b52a148f32b08c1b2c25f614bb552eeb0a",
+      "host": "keybase.io",
+      "kid": "012034af991fa7f47fe572a6a3f87e813f696b575167f3d7b8fb3ec4533e95d75f310a",
+      "uid": "e2bce8aefab25493ceeaea7a9d208800",
+      "username": "keheliya"
+    },
+    "merkle_root": {
+      "ctime": 1501529190,
+      "hash": "e51aa6ec4da82896b3fd93e086af7b4bbdb57f30561b4cc4badc57afc17234f2f35737134345fdd0fbc649b9c3f1067beb53091fb43746f093de2b33bbc65acc",
+      "hash_meta": "2ed4d4fc674d3e99675484ddd52e725d71def302722b566222a700c9e5b14938",
+      "seqno": 1293916
+    },
+    "service": {
+      "hostname": "keheliya.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.27"
+  },
+  "ctime": 1501529203,
+  "expire_in": 504576000,
+  "prev": "6080b98e837c6822132970345a444a47d90b4add28389125079c52540a0b1d0a",
+  "seqno": 7,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgNK+ZH6f0f+VypqP4foE/aWtXUWfz17j7PsRTPpXXXzEKp3BheWxvYWTFA0p7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxNzA2YmM5MjcwNTM1ZWFmYWQ2ZTIwZDUxODc3OTdkNzRiNTJhMTQ4ZjMyYjA4YzFiMmMyNWY2MTRiYjU1MmVlYjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMzRhZjk5MWZhN2Y0N2ZlNTcyYTZhM2Y4N2U4MTNmNjk2YjU3NTE2N2YzZDdiOGZiM2VjNDUzM2U5NWQ3NWYzMTBhIiwidWlkIjoiZTJiY2U4YWVmYWIyNTQ5M2NlZWFlYTdhOWQyMDg4MDAiLCJ1c2VybmFtZSI6ImtlaGVsaXlhIn0sIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNTAxNTI5MTkwLCJoYXNoIjoiZTUxYWE2ZWM0ZGE4Mjg5NmIzZmQ5M2UwODZhZjdiNGJiZGI1N2YzMDU2MWI0Y2M0YmFkYzU3YWZjMTcyMzRmMmYzNTczNzEzNDM0NWZkZDBmYmM2NDliOWMzZjEwNjdiZWI1MzA5MWZiNDM3NDZmMDkzZGUyYjMzYmJjNjVhY2MiLCJoYXNoX21ldGEiOiIyZWQ0ZDRmYzY3NGQzZTk5Njc1NDg0ZGRkNTJlNzI1ZDcxZGVmMzAyNzIyYjU2NjIyMmE3MDBjOWU1YjE0OTM4Iiwic2Vxbm8iOjEyOTM5MTZ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoia2VoZWxpeWEuZ2l0aHViLmlvIiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMjcifSwiY3RpbWUiOjE1MDE1MjkyMDMsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiNjA4MGI5OGU4MzdjNjgyMjEzMjk3MDM0NWE0NDRhNDdkOTBiNGFkZDI4Mzg5MTI1MDc5YzUyNTQwYTBiMWQwYSIsInNlcW5vIjo3LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQEWnwVj3toh7lm1K5fKSGrD/OIjzoQa42si5qCbDvZF/BYpFCOupmZ8QQMXYxSXkY/9xT8ImVozzRL7wemP/cw2oc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCCbyZuv0cNztXomIH1/h/CPeAYMcWMGzyTqChL7Oxi4VKN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/keheliya
+
+==================================================================
