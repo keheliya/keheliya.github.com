@@ -101,7 +101,10 @@
     <h2>Services</h2>
     <div>
       <ul>
-      <li> OOPSLA '17 - <a href="https://2017.splashcon.org/committee/splash-2017-oopsla-artifacts-artifact-evaluation-committee">Artifact Evaluation Committee</a></li></ul>
+      <li>  <a href="https://2017.splashcon.org/committee/splash-2017-oopsla-artifacts-artifact-evaluation-committee">OOPSLA '17</a> - Artifact Evaluation Committee</li>
+      <li> <a href="https://icsme2017.github.io/">ICSME '17</a> - Co-Reviewer</li>
+      <li> <a href="https://www.journals.elsevier.com/journal-of-systems-and-software/">JSS</a> - Co-Reviewer</li>
+      </ul>
     </div>
     
     <h2>Recent Blog Posts</h2>
@@ -132,38 +135,6 @@
 </div><!--end of main_container--> 
 
 <div style="height:1px;"></div>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<script src="moment.min.js" type="text/javascript"></script>
-<script src="https://static.sekandocdn.net/static/feednami/feednami-client-v1.1.js"></script>
-<script type="text/javascript">
-
-$(document).ready(function() {
-    var bg_url = 'http://keheliya.blogspot.com/feeds/posts/default?alt=rss';
-    var wp_url = 'http://galpotha.wordpress.com/feed/';
-
-
-var url= bg_url;
-$.ajax({
-  type: 'GET',
-  url: "https://api.rss2json.com/v1/api.json?rss_url=" + url,
-  dataType: 'jsonp',
-  success: function(data) {
-    console.log(data)
-  entries = data.items;
-            for(var i = 0; i < 3; i++){
-                var entry = entries[i];
-                entry.pubDate = moment(new Date(entry.pubDate)).fromNow();
-                $('#test').append('<div class="source-<!=source!> archive_post">' +
-                '<a class="entry-title" target="_blank" href="'+entry.link+'" title="'+entry.title+'">'+entry.title+'</a>' +
-                '<div class="entry-date"><i>Wrote '+entry.pubDate+'</i></div>' +
-                '</div>');
-            }  
-  }
-});   
-});
-</script>
-
 
 </body>
 </html>
