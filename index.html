@@ -113,14 +113,14 @@
                 <div>
                     Show:
                     <div class="btn-group m-2">
-                    <button type="button" class="btn btn-outline-primary btn-sm active"> All <span class="badge badge-pill badge-light">15</span></button>
-                    <button type="button" class="btn btn-outline-primary btn-sm"> ICSE <span class="badge badge-pill badge-light">1</span></button>
-                    <button type="button" class="btn btn-outline-primary btn-sm"> TSE <span class="badge badge-pill badge-light">2</span></button>
-                    <button type="button" class="btn btn-outline-primary btn-sm"> FSE <span class="badge badge-pill badge-light">1</span></button>
-                    <button type="button" class="btn btn-outline-primary btn-sm"> ASE <span class="badge badge-pill badge-light">3</span></button>
-                    <button type="button" class="btn btn-outline-primary btn-sm"> ICSME <span class="badge badge-pill badge-light">2</span></button>
-                    <button type="button" class="btn btn-outline-primary btn-sm"> MSR <span class="badge badge-pill badge-light">5</span></button>
-                    <button type="button" class="btn btn-outline-primary btn-sm"> ESEM <span class="badge badge-pill badge-light">1</span></button>
+                    <button type="button" class="btn btn-outline-primary btn-sm active"> All <span class="badge badge-pill badge-light">0</span></button>
+                    <button type="button" class="btn btn-outline-primary btn-sm"> ICSE <span class="badge badge-pill badge-light">0</span></button>
+                    <button type="button" class="btn btn-outline-primary btn-sm"> TSE <span class="badge badge-pill badge-light">0</span></button>
+                    <button type="button" class="btn btn-outline-primary btn-sm"> FSE <span class="badge badge-pill badge-light">0</span></button>
+                    <button type="button" class="btn btn-outline-primary btn-sm"> ASE <span class="badge badge-pill badge-light">0</span></button>
+                    <button type="button" class="btn btn-outline-primary btn-sm"> ICSME <span class="badge badge-pill badge-light">0</span></button>
+                    <button type="button" class="btn btn-outline-primary btn-sm"> MSR <span class="badge badge-pill badge-light">0</span></button>
+                    <button type="button" class="btn btn-outline-primary btn-sm"> ESEM <span class="badge badge-pill badge-light">0</span></button>
                 </div>
                 <br/>
                 </div>
@@ -410,6 +410,31 @@
         crossorigin="anonymous"></script>
 <script>
     $(document).ready(function () {
+        // Update conference paper counts
+        var counts = {};
+        $(".paper").each(function () {
+            var conference = $(this).text().split("'")[0];
+            counts[conference] = (counts[conference] || 0) + 1;
+        });
+
+        $('.btn-group .btn').each(function () {
+            var buttonText = $(this).text().trim();
+            var conference = buttonText.split(' ')[0];
+            var badge = $(this).find('.badge');
+
+            if (conference === 'All') {
+                var total = 0;
+                for (var conf in counts) {
+                    total += counts[conf];
+                }
+                badge.text(total);
+            } else if (counts[conference]) {
+                badge.text(counts[conference]);
+            } else {
+                badge.text(0);
+            }
+        });
+
         $('.btn').click(function() {
             $('.btn').removeClass('active');
             $(this).addClass('active');
