@@ -5,7 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Keheliya Gallaba, Ph.D. — Software Engineering Researcher at the Waterloo Centre for Software Excellence, Huawei Canada. Publications, patents, and professional service.">
     <meta name="author" content="Keheliya Gallaba">
+    <link rel="canonical" href="https://keheliya.github.io/">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Keheliya Gallaba, Ph.D.">
+    <meta property="og:description" content="Software Engineering Researcher at the Waterloo Centre for Software Excellence, Huawei Canada. Publications, patents, and professional service.">
+    <meta property="og:url" content="https://keheliya.github.io/">
+    <meta property="og:image" content="https://keheliya.github.io/images/portrait_keheliya.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Keheliya Gallaba, Ph.D.">
+    <meta name="twitter:description" content="Software Engineering Researcher at the Waterloo Centre for Software Excellence, Huawei Canada.">
+    <meta name="twitter:image" content="https://keheliya.github.io/images/portrait_keheliya.jpg">
     <link rel="icon" href="images/favicon.ico">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Keheliya Gallaba",
+      "honorificSuffix": "Ph.D.",
+      "jobTitle": "Software Engineering Researcher",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Waterloo Centre for Software Excellence, Huawei Canada"
+      },
+      "alumniOf": [
+        {"@type": "CollegeOrUniversity", "name": "McGill University"},
+        {"@type": "CollegeOrUniversity", "name": "University of British Columbia"},
+        {"@type": "CollegeOrUniversity", "name": "University of Moratuwa"}
+      ],
+      "url": "https://keheliya.github.io/",
+      "image": "https://keheliya.github.io/images/portrait_keheliya.jpg",
+      "sameAs": [
+        "https://scholar.google.ca/citations?user=FF_M_CEAAAAJ",
+        "https://dblp.uni-trier.de/pid/130/2374.html",
+        "https://www.linkedin.com/in/keheliya",
+        "https://github.com/keheliya",
+        "https://fosstodon.org/@keheliya",
+        "https://twitter.com/keheliya"
+      ]
+    }
+    </script>
     <style>body {
         margin-top: 80px;
         margin-bottom: 80px
@@ -449,9 +487,6 @@
 </footer>
 
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
 <!-- Bootstrap core CSS -->
 <link href="bootstrap.min.css" rel="stylesheet">
 <link href="academicons.css" rel="stylesheet">
@@ -461,51 +496,39 @@
 <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" 
         integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" 
         crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
-        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-        crossorigin="anonymous"></script>
-<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
-        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-        crossorigin="anonymous"></script>
 <script>
-    $(document).ready(function () {
+    document.addEventListener('DOMContentLoaded', function () {
+        // Mobile navbar toggle (replaces Bootstrap's collapse plugin)
+        var toggler = document.querySelector('.navbar-toggler');
+        var collapse = document.getElementById('navbarsExampleDefault');
+        toggler.addEventListener('click', function () {
+            collapse.classList.toggle('show');
+            toggler.setAttribute('aria-expanded', collapse.classList.contains('show'));
+        });
+
         // Update conference paper counts
+        var papers = Array.prototype.slice.call(document.querySelectorAll('.paper'));
         var counts = {};
-        $(".paper").each(function () {
-            var conference = $(this).text().split("'")[0];
+        papers.forEach(function (paper) {
+            var conference = paper.textContent.split("'")[0];
             counts[conference] = (counts[conference] || 0) + 1;
         });
 
-        $('.btn-group .btn').each(function () {
-            var buttonText = $(this).text().trim();
-            var conference = buttonText.split(' ')[0];
-            var badge = $(this).find('.badge');
+        document.querySelectorAll('.btn-group .btn').forEach(function (button) {
+            var conference = button.textContent.trim().split(' ')[0];
+            button.querySelector('.badge').textContent =
+                conference === 'All' ? papers.length : (counts[conference] || 0);
 
-            if (conference === 'All') {
-                var total = 0;
-                for (var conf in counts) {
-                    total += counts[conf];
-                }
-                badge.text(total);
-            } else if (counts[conference]) {
-                badge.text(counts[conference]);
-            } else {
-                badge.text(0);
-            }
-        });
-
-        $('.btn').click(function() {
-            $('.btn').removeClass('active');
-            $(this).addClass('active');
-            var publication =  $(this).text().trim().split(' ')[0];
-            $(".paper").each(function () {
-                $(this).parent().show();
-                if(publication !== "All" && !$(this).text().toUpperCase().includes(publication)){
-                    $(this).parent().hide();
-                }
+            button.addEventListener('click', function () {
+                document.querySelectorAll('.btn-group .btn').forEach(function (other) {
+                    other.classList.remove('active');
+                });
+                button.classList.add('active');
+                papers.forEach(function (paper) {
+                    var show = conference === 'All' ||
+                        paper.textContent.toUpperCase().includes(conference);
+                    paper.closest('li').style.display = show ? '' : 'none';
+                });
             });
         });
     });
