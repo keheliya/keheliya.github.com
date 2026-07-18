@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Public lectures and invited talks by Keheliya Gallaba, Ph.D. — agentic architectures, RAG engineering, and foundation models for software engineering.">
+    <meta name="author" content="Keheliya Gallaba">
+    <link rel="canonical" href="https://keheliya.github.io/talks.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Talks — Keheliya Gallaba, Ph.D.">
+    <meta property="og:description" content="Public lectures and invited talks on agentic architectures, RAG engineering, and foundation models for software engineering.">
+    <meta property="og:url" content="https://keheliya.github.io/talks.html">
+    <meta property="og:image" content="https://keheliya.github.io/images/portrait_keheliya.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Talks — Keheliya Gallaba, Ph.D.">
+    <meta name="twitter:description" content="Public lectures and invited talks on agentic architectures, RAG engineering, and foundation models for software engineering.">
+    <link rel="icon" href="images/favicon.ico">
+    <style>body {
+        margin-top: 80px;
+        margin-bottom: 80px
+    }
+
+    html {
+        position: relative;
+        min-height: 100%
+    }
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    [id] {
+        scroll-margin-top: 80px;
+    }
+
+    .talk-video {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 4px;
+        background: #000;
+    }
+
+    .talk-video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }</style>
+    <title>Talks — Keheliya Gallaba, Ph.D.</title>
+
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="https://rebels.ece.mcgill.ca/" target="_blank" rel="noopener">
+            <img src="images/rebels.png" width="30" height="30" alt="Software REBELs lab logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/keheliya">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cv_keheliya_gallaba.pdf">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#publications">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#patents">Patents</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="talks.html">Talks <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#service">Service</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://rebels.ece.mcgill.ca/" target="_blank" rel="noopener">Software REBELs</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main role="main">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Talks</h3>
+                <p>Some lectures and invited talks I have delivered publicly, with recordings available online.
+                    The first two lectures were first delivered in the <strong>CISC877: Software Engineering and
+                    Foundation Models</strong> graduate course at Queen's University, Kingston, Canada, and variants
+                    were later presented at AIware Bootcamps in Toronto and Ottawa for a broader audience.</p>
+            </div>
+        </div>
+
+        <hr/>
+        <div class="row" id="agentic-architectures">
+            <div class="col-md-5">
+                <div class="talk-video">
+                    <iframe src="https://www.youtube-nocookie.com/embed/fuag-KiPijQ"
+                            title="Lecture recording: Agentic Architectures and Workflows"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                </div>
+                <p class="mt-2">
+                    <a href="https://www.youtube.com/watch?v=fuag-KiPijQ"><i class="fas fa-film"></i> Watch on YouTube</a>
+                </p>
+            </div>
+            <div class="col-md-7">
+                <h4>Agentic Architectures and Workflows</h4>
+                <span class="badge badge-success">CISC877 @ Queen's</span>
+                <span class="badge badge-success">AIware Bootcamp</span>
+                <span class="badge badge-primary">Lecture</span>
+                <span class="badge badge-secondary">90 mins</span>
+                <p class="mt-2">A deep dive into how foundation model agents are built and orchestrated,
+                    from first principles to multi-agent systems in software engineering.</p>
+                <p class="mb-1">Topics covered:</p>
+                <ul>
+                    <li>What is an Agent? (e.g., Perception, Brain, Action, Environment)</li>
+                    <li>Different types of agentic memory</li>
+                    <li>How does an Agent use tools? (Toolformer, ReAct)</li>
+                    <li>How to enable an Agent to plan and reason? — Introduction to the theory of mind</li>
+                    <li>Cognitive architectures — Multi-layered abstractions (recursion, multi vs single agent architectures)</li>
+                    <li>Agent patterns — Chains, routers, graphs</li>
+                    <li>Control mechanisms — Static vs dynamic orchestration</li>
+                    <li>Patterns of multi-agent collaboration</li>
+                    <li>Self-reflection and multi-agent hacks</li>
+                    <li>Agents in software engineering</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr/>
+        <div class="row" id="rag-engineering">
+            <div class="col-md-5">
+                <div class="talk-video">
+                    <iframe src="https://www.youtube-nocookie.com/embed/PD6AKe1jOg0"
+                            title="Lecture recording: RAG Engineering"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                </div>
+                <p class="mt-2">
+                    <a href="https://www.youtube.com/watch?v=PD6AKe1jOg0"><i class="fas fa-film"></i> Watch on YouTube</a>
+                </p>
+            </div>
+            <div class="col-md-7">
+                <h4>RAG Engineering</h4>
+                <span class="badge badge-success">CISC877 @ Queen's</span>
+                <span class="badge badge-success">AIware Bootcamp</span>
+                <span class="badge badge-primary">Lecture</span>
+                <span class="badge badge-secondary">90 mins</span>
+                <p class="mt-2">From the fundamentals of retrieval-augmented generation to the advanced techniques
+                    needed for enterprise-grade, production-ready RAG systems.</p>
+                <p class="mb-1">Topics covered:</p>
+                <ul>
+                    <li>What is RAG? — An overview of indexing, retrieval, and generation</li>
+                    <li>An overview of query translation approaches — Multi-query, RAG-fusion, Least-to-most, step-back prompting, HyDE</li>
+                    <li>Query routing strategies — Logical routing and semantic routing</li>
+                    <li>Query construction strategies</li>
+                    <li>Advanced indexing techniques for effective RAG — Multi-representation indexing, RAPTOR, ColBERT</li>
+                    <li>Graph RAGs</li>
+                    <li>RAG re-rankers</li>
+                    <li>Large context challenges: Needle in a haystack, counting stars, data movement and caching/pinning of context in the cloud</li>
+                    <li>Context vs built-in prioritization</li>
+                    <li>RAG in software engineering research</li>
+                    <li>A reference architecture for enterprise-grade production-ready RAGware</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr/>
+        <div class="row" id="beyond-vibe-coding">
+            <div class="col-md-5">
+                <div class="talk-video">
+                    <iframe src="https://www.youtube-nocookie.com/embed/4aCdESp_HXw"
+                            title="Talk recording: Beyond Vibe Coding — Leveraging Foundation Models to Infer Intent"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                </div>
+                <p class="mt-2">
+                    <a href="https://www.youtube.com/watch?v=4aCdESp_HXw"><i class="fas fa-film"></i> Watch on YouTube</a>
+                </p>
+            </div>
+            <div class="col-md-7">
+                <h4>Beyond Vibe Coding: Leveraging Foundation Models to Infer Intent</h4>
+                <span class="badge badge-success">RAISE'25 @ ICSE'25</span>
+                <span class="badge badge-success">AIware Bootcamp Europe</span>
+                <span class="badge badge-primary">Invited Talk</span>
+                <span class="badge badge-secondary">30 mins</span>
+                <p class="mt-2">First delivered at the <i>RAISE 2025: Requirements engineering for AI-powered
+                    SoftwarE</i> workshop, co-located with ICSE'25 in Ottawa. A variant of this talk was later
+                    delivered at AIware Bootcamp — Europe 2025 in Amsterdam, Netherlands, co-located with
+                    OSS Europe 2025.</p>
+                <p class="mb-1">Topics covered:</p>
+                <ul>
+                    <li>Why requirements engineering is the bottleneck — Aligning software with true user needs starts with understanding intent</li>
+                    <li>From vibe coding to real engineering — Critiquing the throwaway culture of prompting and patching</li>
+                    <li>What are intents, really? — Distinguishing goals, requirements, and the hidden rationale that underpins them</li>
+                    <li>Inferring intents with foundation models — Using Theory of Mind, iterative refinement, and dialogue context to bridge ambiguity</li>
+                    <li>Conversational interfaces for requirement elicitation — Proactively clarify requirements, resolve contradictions, and avoid premature solutions</li>
+                    <li>Evaluating intent quality — Rubrics for accuracy, relevance, completeness, realizability, and collaboration support</li>
+                    <li>Real-world gains over baselines — Evidence that FM-inferred requirements deliver better grounding and satisfaction</li>
+                    <li>Known challenges — Tackling sycophancy, hallucination, and compute cost</li>
+                    <li>What's next for requirements engineering — Reasoning-augmented models, multi-modal inputs, and non-chat interfaces</li>
+                    <li>Call to action — Foundation models shouldn't just write code; they must understand why the code exists</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr/>
+        <div class="row">
+            <div class="col-md-12">
+                <p><a href="index.html"><i class="fas fa-arrow-left"></i> Back to home</a></p>
+            </div>
+        </div>
+
+    </div> <!-- /container -->
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div id="social">
+            <a href="https://www.mcgill.ca" title="McGill University" class="icon-mcgill logos"></a>
+            <a href="https://ece.ubc.ca" title="ECE @ UBC" class="icon-ece logos"></a>
+            <a href="https://ubc.ca" title="University of British Columbia" class="icon-ubc logos"></a>
+            <a href="https://www.mrt.ac.lk/web/" title="University of Moratuwa" class="icon-uom logos"></a>
+            <a href="https://www.cse.mrt.ac.lk/" title="CSE @ UoM" class="icon-cse logos"></a>
+            <a href="https://royalcollege.lk/" title="Royal College" class="icon-rc logos"></a>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Bootstrap core CSS -->
+<link href="bootstrap.min.css" rel="stylesheet">
+<link href="academicons.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="style.css" rel="stylesheet">
+<script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js"
+        integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7"
+        crossorigin="anonymous"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Mobile navbar toggle (replaces Bootstrap's collapse plugin)
+        var toggler = document.querySelector('.navbar-toggler');
+        var collapse = document.getElementById('navbarsExampleDefault');
+        toggler.addEventListener('click', function () {
+            collapse.classList.toggle('show');
+            toggler.setAttribute('aria-expanded', collapse.classList.contains('show'));
+        });
+    });
+</script>
+</body>
+</html>
